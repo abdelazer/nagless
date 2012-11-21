@@ -1,4 +1,5 @@
 *.py[cod]
+.*.swp
 
 # C extensions
 *.so
@@ -29,7 +30,11 @@ nosetests.xml
 # Translations
 *.mo
 
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
+serverconf
+nagless_com.py
+local.py
+*.DS_Store
+.#*
+ve
+\#*
+*~

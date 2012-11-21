@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body_class %} login {% endblock body_class %}
+
+{% block content %}
+  <div class="login-box clearfix">
+    <a href="{% url socialauth_begin 'google-oauth2' %}" class="cta-btn">Sign In</a>
+  </div>
+{% endblock content %}

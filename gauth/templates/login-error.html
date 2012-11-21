@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ block.super }} - Login Error
+{% endblock title %}
+
+{% block body_class %} login {% endblock body_class %}
+
+{% block content %}
+  <div class="login-box clearfix">
+
+  <h1>A login error has occurred.</h1>
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <p>To try again please click the button below</p>
+  <a href="{% url socialauth_begin 'google-oauth2' %}" class="cta-btn">Sign In</a>
+</div>
+{% endblock content %}

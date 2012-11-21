@@ -1,0 +1,15 @@
+1. Visit https://code.google.com/apis/console#access 
+2. Create a Project
+3. Select API Access (you do not need any specific APIs yet)
+4. Click "Create an OAuth 2.0 client ID..." 
+5. Choose Web Application
+6. Edit the Client ID Settings and update the Authorized Redirect URLs, you want (ideally those last two are HTTPS):
+  * http://localhost:8073/complete/google-oauth2/
+  * http://{dev server}/complete/google-oauth2/
+  * http://{prod server}/complete/google-oauth2/
+
+
+
+Add to your local.py:
+    GOOGLE_OAUTH2_CLIENT_ID from Google
+    GOOGLE_OAUTH2_CLIENT_SECRET from Google
