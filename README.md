@@ -31,38 +31,11 @@ Install Software
     sudo apt-get upgrade
     sudo apt-get install nginx postgresql build-essential libpq-dev python-virtualenv python-dev 
 
-Firewall
---------
-The UFW firewall may also need to
-be turned off. This should work:
-
-    sudo ufw allow 80/tcp
-
 Configure Postgres
 ------------------
 As user postgres:
 
     createuser nagless --createdb --no-adduser --no-createrole
-
-Nginx
------
-As user root:
-
-    rm -f /etc/nginx/sites-enabled/default
-    cp /var/www/{hostkey}/the_deployment/serverconf/nginx/{hostkey}/{hostkey} /etc/nginx/sites-enabled/ 
-
-Upstart
--------
-As user root:
-
-    cp /var/www/{hostkey}/the_deployment/serverconf/uwsgi/{hostkey}/uwsgi.conf /etc/init/
-
-Syslog
-------
-As user root:
-
-    cp /var/www/{hostkey}/the_deployment/serverconf/rsyslog/{hostkey}/30-nagless.conf /etc/rsyslog.d/ 
-    service rsyslog restart
 
 Deploy
 ------
